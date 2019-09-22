@@ -1,5 +1,5 @@
 package {{.FolderName}}
 type {{nameConvert .Table.TableName}} struct{
-    {{range $_,$v := .Table.Comlumns}}{{nameConvert $v.ColumnName}} {{typeConvert $v.ColumnType}} `json:"{{$v.ColumnName}}"` 
+    {{range $_,$v := .Table.Comlumns}}{{nameConvert $v.ColumnName}} {{typeConvert $v.ColumnType}} `gorm:"{{if $v.IsPrimaryKey}}primary_key; {{end}}column:{{$v.ColumnName}}; type:{{$v.ColumnType}};{{if $v.NotNull}} not null;{{end}}" json:"{{$v.ColumnName}}"`                                                                
     {{end}}
 }
