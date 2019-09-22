@@ -1,0 +1,35 @@
+2019/09/21 16:31:23.070 [E] [init.go:24]  初始化数据库失败，参数为空
+2019/09/21 16:31:23.070 [E] [main.go:32]  初始化数据库失败，参数为空
+2019/09/21 16:31:23.070 [E] [main.go:14]  初始化数据库失败，参数为空
+2019/09/21 16:32:29.571 [E] [init.go:24]  初始化数据库失败，参数为空
+2019/09/21 16:32:29.572 [E] [main.go:32]  初始化数据库失败，参数为空
+2019/09/21 16:32:29.572 [E] [main.go:14]  初始化数据库失败，参数为空
+2019/09/21 16:33:01.886 [E] [init.go:35]  sql: unknown driver "postgres" (forgotten import?)
+2019/09/21 16:33:01.886 [E] [main.go:32]  sql: unknown driver "postgres" (forgotten import?)
+2019/09/21 16:33:01.886 [E] [main.go:14]  sql: unknown driver "postgres" (forgotten import?)
+2019/09/21 17:35:20.563 [E] [init.go:35]  sql: unknown driver "postgres" (forgotten import?)
+2019/09/21 17:35:20.563 [E] [main.go:32]  sql: unknown driver "postgres" (forgotten import?)
+2019/09/21 17:35:20.563 [E] [main.go:14]  sql: unknown driver "postgres" (forgotten import?)
+2019/09/21 19:49:22.696 [E] [struct.go:96]  sql: expected 1 destination arguments in Scan, not 5
+2019/09/21 19:49:22.696 [E] [struct.go:65]  sql: expected 1 destination arguments in Scan, not 5
+2019/09/21 19:49:22.696 [E] [main.go:19]  sql: expected 1 destination arguments in Scan, not 5
+2019/09/22 10:52:40.505 [E] [processor.go:44]  template: temp_struct.txt:1: function "nameConvert" not defined
+2019/09/22 10:52:40.505 [E] [main.go:20]  template: temp_struct.txt:1: function "nameConvert" not defined
+2019/09/22 11:10:16.810 [E] [processor.go:46]  template: temp_struct.txt:1: function "nameConvert" not defined
+2019/09/22 11:10:16.810 [E] [main.go:20]  template: temp_struct.txt:1: function "nameConvert" not defined
+2019/09/22 11:12:04.808 [E] [processor.go:46]  template: temp_struct.txt:2: function "_" not defined
+2019/09/22 11:12:04.808 [E] [main.go:20]  template: temp_struct.txt:2: function "_" not defined
+2019/09/22 11:46:23.528 [E] [processor.go:50]  open /home/kongzhou/桌面/generateGORM/outFiles/models/t_course.go: permission denied
+2019/09/22 11:46:23.528 [E] [main.go:20]  open /home/kongzhou/桌面/generateGORM/outFiles/models/t_course.go: permission denied
+2019/09/22 11:50:08.548 [E] [processor.go:50]  open /home/kongzhou/桌面/generateGORM/outFiles/models/t_course.go: permission denied
+2019/09/22 11:50:08.548 [E] [main.go:20]  open /home/kongzhou/桌面/generateGORM/outFiles/models/t_course.go: permission denied
+2019/09/22 11:59:31.971 [I] [processor.go:73]  result: outFiles/models/t_course.go
+
+2019/09/22 11:59:31.981 [I] [processor.go:73]  result: outFiles/models/t_sc.go
+
+2019/09/22 11:59:31.988 [I] [processor.go:73]  result: outFiles/models/t_student.go
+
+2019/09/22 11:59:31.998 [I] [processor.go:73]  result: outFiles/models/test.go
+
+2019/09/22 11:59:32.019 [I] [processor.go:73]  result: outFiles/models/v_stu.go
+

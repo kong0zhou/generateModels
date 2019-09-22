@@ -1,0 +1,9 @@
+database:
+  host: 106.52.121.11
+  port: 8081
+  user: test_admin
+  dbname: test
+  sslmode: true
+  password: test_admin
+# 文件夹名
+folderName: models

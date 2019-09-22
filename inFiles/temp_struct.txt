@@ -1,0 +1,5 @@
+package {{.FolderName}}
+type {{nameConvert .Table.TableName}} struct{
+    {{range $_,$v := .Table.Comlumns}}{{nameConvert $v.ColumnName}} {{typeConvert $v.ColumnType}} `json:"{{$v.ColumnName}}"` 
+    {{end}}
+}
