@@ -6,7 +6,7 @@ SELECT
     a.attname AS column_name,
     --format_type(a.atttypid, a.atttypmod) AS column_type,
     a.attnotnull AS not_null,
-    --COALESCE(pg_get_expr(ad.adbin, ad.adrelid), '') AS default_value,
+    COALESCE(pg_get_expr(ad.adbin, ad.adrelid), '') AS default_value,
     COALESCE(ct.contype = 'p', false) AS  is_primary_key,
     CASE
         WHEN a.atttypid = ANY ('{int,int8,int2}'::regtype[])

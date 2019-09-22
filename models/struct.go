@@ -1,6 +1,7 @@
 package models
 
 import (
+	"database/sql"
 	"fmt"
 
 	"github.com/astaxie/beego/logs"
@@ -10,6 +11,7 @@ type Comlumn struct {
 	ColumnNumber int
 	ColumnName   string
 	ColumnType   string
+	DefaultValue string
 	NotNull      bool
 	IsPrimaryKey bool
 }
@@ -91,7 +93,9 @@ func getColumn(table *Table) (err error) {
 	defer comlumnRows.Close()
 	for comlumnRows.Next() {
 		var comlumn Comlumn
-		err = comlumnRows.Scan(&comlumn.ColumnNumber, &comlumn.ColumnName, &comlumn.NotNull, &comlumn.IsPrimaryKey, &comlumn.ColumnType)
+		var defaultV sql.NullString
+		err = comlumnRows.Scan(&comlumn.ColumnNumber, &comlumn.ColumnName, &comlumn.NotNull, &defaultV, &comlumn.IsPrimaryKey, &comlumn.ColumnType)
+		comlumn.DefaultValue = defaultV.String
 		if err != nil {
 			logs.Error(err)
 			return err

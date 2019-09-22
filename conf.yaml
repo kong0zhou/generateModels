@@ -1,9 +1,9 @@
 database:
-  host: 106.52.121.11
-  port: 8081
-  user: test_admin
-  dbname: test
+  host: ifeel.vip
+  port: 5432
+  user: ards
+  dbname: ards
   sslmode: true
-  password: test_admin
+  password: ards
 # 文件夹名
 folderName: models

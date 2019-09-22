@@ -30,6 +30,9 @@ func TypeConvert(s string) (r string, err error) {
 	if strings.Contains(s, `time`) || in(s, []string{`date`}) {
 		return `time.Time`, nil
 	}
+	if strings.Contains(s, `bool`) {
+		return `bool`, nil
+	}
 	return `interface{}`, nil
 }
 

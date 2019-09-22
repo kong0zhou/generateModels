@@ -33,3 +33,47 @@
 
 2019/09/22 11:59:32.019 [I] [processor.go:73]  result: outFiles/models/v_stu.go
 
+2019/09/22 16:57:22.767 [I] [processor.go:74]  result: outFiles/models/t_feedback.go
+
+2019/09/22 16:57:22.788 [I] [processor.go:74]  result: outFiles/models/t_problem.go
+
+2019/09/22 16:57:22.800 [I] [processor.go:74]  result: outFiles/models/t_record.go
+
+2019/09/22 16:57:22.812 [I] [processor.go:74]  result: outFiles/models/t_user.go
+
+2019/09/22 16:57:22.820 [I] [processor.go:74]  result: outFiles/models/t_user_problem.go
+
+2019/09/22 17:09:19.815 [E] [processor.go:60]  template: temp_struct.txt:3: unexpected "!" in operand
+2019/09/22 17:09:19.815 [E] [main.go:20]  template: temp_struct.txt:3: unexpected "!" in operand
+2019/09/22 17:12:06.931 [E] [processor.go:65]  template: temp_struct.txt:3:204: executing "temp_struct.txt" at <$v.DefaultValue>: DefaultValue has arguments but cannot be invoked as function
+2019/09/22 17:12:06.931 [E] [main.go:20]  template: temp_struct.txt:3:204: executing "temp_struct.txt" at <$v.DefaultValue>: DefaultValue has arguments but cannot be invoked as function
+2019/09/22 17:12:47.659 [I] [processor.go:74]  result: outFiles/models/t_feedback.go
+
+2019/09/22 17:12:47.671 [I] [processor.go:74]  result: outFiles/models/t_problem.go
+
+2019/09/22 17:12:47.680 [I] [processor.go:74]  result: outFiles/models/t_record.go
+
+2019/09/22 17:12:47.691 [I] [processor.go:74]  result: outFiles/models/t_user.go
+
+2019/09/22 17:12:47.702 [I] [processor.go:74]  result: outFiles/models/t_user_problem.go
+
+2019/09/22 17:15:33.458 [I] [processor.go:74]  result: outFiles/models/t_feedback.go
+
+2019/09/22 17:15:33.468 [I] [processor.go:74]  result: outFiles/models/t_problem.go
+
+2019/09/22 17:15:33.477 [I] [processor.go:74]  result: outFiles/models/t_record.go
+
+2019/09/22 17:15:33.487 [I] [processor.go:74]  result: outFiles/models/t_user.go
+
+2019/09/22 17:15:33.498 [I] [processor.go:74]  result: outFiles/models/t_user_problem.go
+
+2019/09/22 17:26:53.808 [I] [processor.go:74]  result: outFiles/models/t_feedback.go
+
+2019/09/22 17:26:53.824 [I] [processor.go:74]  result: outFiles/models/t_problem.go
+
+2019/09/22 17:26:53.837 [I] [processor.go:74]  result: outFiles/models/t_record.go
+
+2019/09/22 17:26:53.848 [I] [processor.go:74]  result: outFiles/models/t_user.go
+
+2019/09/22 17:26:53.857 [I] [processor.go:74]  result: outFiles/models/t_user_problem.go
+
