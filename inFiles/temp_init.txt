@@ -1,17 +1,31 @@
-package models
+package {{.FolderName}}
 
 import (
-	"database/sql"
 	"fmt"
 
 	"../common"
 	"github.com/astaxie/beego/logs"
-	_ "github.com/lib/pq"
+	"github.com/jinzhu/gorm"
+	_ "github.com/jinzhu/gorm/dialects/postgres"
 )
 
-var db *sql.DB
+/*
+*******	yaml配置文件 ********
+postgresql:
+  host: {{.PostgresArgs.Host}}
+  port: {{.PostgresArgs.Port}}
+  user:	{{.PostgresArgs.User}}
+  dbname: {{.PostgresArgs.DBName}}
+  # true 或者 false
+  sslmode: {{.PostgresArgs.SSLMode}}
+  password: {{.PostgresArgs.Password}}
 
-// 别忘记在main函数中 defer db.Close()
+****** 注意事项 *******
+这里运用的ConfViper是  "github.com/spf13/viper" 包的
+其类型是 *viper.Viper，要在common包中初始化，或者你可以自定义其他包，然后进行导入之后进行修改
+*/
+
+var db *gorm.DB
 
 func InitDB() (err error) {
 	host := common.ConfViper.GetString(`postgresql.host`)
@@ -31,19 +45,13 @@ func InitDB() (err error) {
 	} else {
 		dbInfo = fmt.Sprintf(`host=%s port=%s user=%s dbname=%s sslmode=disable password=%s`, host, port, user, dbname, password)
 	}
-	db, err = sql.Open(`postgres`, dbInfo)
+	db, err = gorm.Open(`postgres`, dbInfo)
 	if err != nil {
 		logs.Error(err)
 		return
 	}
-	if err := db.Ping(); err != nil {
-		logs.Error("连接数据库失败", err)
-		return err
-	}
+	// 全局禁用表名复数
+	db.SingularTable(true)
 
-	//SetMaxIdleConns设置空闲连接池中的最大连接数。
-	db.SetMaxIdleConns(20)
-	// 设置数据库的最大开放连接数。如果n≤0，则开放连接的数量没有限制。默认值为0
-	db.SetMaxOpenConns(40)
 	return nil
 }

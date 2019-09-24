@@ -15,7 +15,12 @@ func main() {
 		logs.Error(err)
 		return
 	}
-	err = processor.Processor()
+	err = processor.GenerateModels()
+	if err != nil {
+		logs.Error(err)
+		return
+	}
+	err = processor.GenerateInit()
 	if err != nil {
 		logs.Error(err)
 		return

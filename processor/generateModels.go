@@ -17,7 +17,7 @@ type gStructArgs struct {
 	FolderName string
 }
 
-func Processor() (err error) {
+func GenerateModels() (err error) {
 	tables, err := models.GetTables()
 	if err != nil {
 		logs.Error(err)

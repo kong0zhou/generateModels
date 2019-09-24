@@ -1,4 +1,4 @@
-database:
+postgresql:
   host: ifeel.vip
   port: 5432
   user: ards
